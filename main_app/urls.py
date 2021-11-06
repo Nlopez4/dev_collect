@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.Home.as_view(), name="home"),  # splash page
 
 
-    # Post Project 
-    
+    # Post Project
+    path('project/', views.ProjectList.as_view(),name="project_list"),
+    path('project/<int:pk>/', views.ProjectDetail.as_view(), name="project_detail"),
 ]
