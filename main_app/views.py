@@ -27,4 +27,8 @@ class ProjectDetail(DetailView):
     model = Project
     template_name = "project_detail.html"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["projects"] = Project.objects.all() # Here we are using the model to query the database for us.
+        return context
 
