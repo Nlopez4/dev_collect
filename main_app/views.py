@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic.base import TemplateView
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView
 from .models import Project
+from .forms import ProjectForm
 
 
 from django.shortcuts import render, redirect, reverse
@@ -16,6 +17,23 @@ class Home(TemplateView):
 
 
 # Project
+# class ProjectCreate(CreateView):
+#     model = Project
+#     fields = ['user', 'title', 'description', 'tech_used', 'github_link', 'site_link']
+#     template_name = "project_create.html"
+#     success_url = "/project/"
+
+def createProject(request):
+    form = ProjectForm()
+    if request.method == 'POST':
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('project_list')
+    
+    context = {'form': form}
+    return render(request, "project_create.html", context)
+    
 class ProjectList(TemplateView):
     template_name = "project_list.html"
     
@@ -31,22 +49,9 @@ class ProjectDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["projects"] = Project.objects.all() # Here we are using the model to query the database for us.
+        context["projects"] = Project.objects.all() 
         return context
 
-class ProjectCreate(CreateView):
-    model = Project
-    fields = ['user', 'title', 'description', 'tech_used', 'github_link', 'site_link']
-    template_name = "project_create.html"
-    
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(ProjectCreate, self).form_valid(form)
-    
-    def get_success_url(self):
-        print(self.kwargs)
-        return reverse('project_detail', kwargs={'pk': self.object.pk})
-    
-    success_url = "/project/"
+
     
 
