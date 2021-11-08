@@ -16,30 +16,29 @@ class Home(TemplateView):
     template_name = "home.html"
 
 
-# Project
-# class ProjectCreate(CreateView):
-#     model = Project
-#     fields = ['user', 'title', 'description', 'tech_used', 'github_link', 'site_link']
-#     template_name = "project_create.html"
-#     success_url = "/project/"
 
-def createProject(request):
-    form = ProjectForm()
-    if request.method == 'POST':
-        form = ProjectForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('project_list')
+# CRUD
+class ProjectCreate(CreateView):
+    model = Project
+    fields = ['title', 'description', 'tech_used', 'github_link', 'site_link']
+    template_name = "project_create.html"
+    success_url = "/project/"
     
-    context = {'form': form}
-    return render(request, "project_create.html", context)
+    def form_valid(self, form):
+        return super(ProjectCreate, self).form_valid(form)
     
+    def get_success_url(self):
+        print(self.kwargs)
+        return reverse('project_list')
+
+
+# PROJECT
 class ProjectList(TemplateView):
     template_name = "project_list.html"
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["projects"] = Project.objects.all() # Here we are using the model to query the database for us.
+        context["projects"] = Project.objects.all() 
         return context
 
 
