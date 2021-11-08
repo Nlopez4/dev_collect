@@ -5,7 +5,6 @@ from django.contrib.auth.models import User
 
 
 class Project(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField(null=True, blank=True)
     tech_used = models.CharField(max_length=500)
@@ -15,3 +14,5 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+    
+
