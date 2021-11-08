@@ -9,4 +9,9 @@
 <p>{{project.github_link}}</p>
 <p>{{project.site_link}}</p>
 <p>{{project.created}}</p>
+
+
+<a href="{% url 'project_update' project.pk %}">EDIT</a>
+
+</div>
 {% endblock %}
