@@ -3,6 +3,6 @@
 
 <ul>
   {% for project in projects %}
-  <li>Title of project:<a href="{% url 'project_detail' project.id %}">{{ project.title }}</li>
+  <li><a href="{% url 'project_detail' project.id %}">{{ project.title }}</li>
 </ul>
 {% endfor %} {% endblock %}
