@@ -37,7 +37,10 @@ class ProjectUpdate(UpdateView):
     template_name = "project_update.html"
     success_url = "/project/"
 
-
+class ProjectDelete(DeleteView):
+    model = Project
+    template_name = "project_delete_confirmation.html"
+    success_url = "/project/"
 
 
 
