@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.views.generic.base import TemplateView
 from django.views.generic import DetailView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Project
 from .forms import ProjectForm
 
@@ -30,6 +30,15 @@ class ProjectCreate(CreateView):
     def get_success_url(self):
         print(self.kwargs)
         return reverse('project_list')
+
+class ProjectUpdate(UpdateView):
+    model = Project
+    fields = ['title', 'description', 'tech_used', 'github_link', 'site_link']
+    template_name = "project_update.html"
+    success_url = "/project/"
+
+
+
 
 
 # PROJECT
