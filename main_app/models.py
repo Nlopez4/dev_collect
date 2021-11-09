@@ -11,6 +11,7 @@ class Project(models.Model):
     github_link = models.CharField(max_length=2000, null=True, blank=True)
     site_link = models.CharField(max_length=2000, null=True, blank=True)
     created = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
