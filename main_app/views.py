@@ -20,7 +20,7 @@ class Home(TemplateView):
 # CRUD
 class ProjectCreate(CreateView):
     model = Project
-    fields = ['title', 'description', 'tech_used', 'github_link', 'site_link']
+    fields = ['title', 'description', 'skills', 'github_link', 'site_link']
     template_name = "project_create.html"
     success_url = "/project/"
     
@@ -33,7 +33,7 @@ class ProjectCreate(CreateView):
 
 class ProjectUpdate(UpdateView):
     model = Project
-    fields = ['title', 'description', 'tech_used', 'github_link', 'site_link']
+    fields = ['title', 'description', 'skills', 'github_link', 'site_link']
     template_name = "project_update.html"
     success_url = "/project/"
 
