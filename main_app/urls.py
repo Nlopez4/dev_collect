@@ -8,6 +8,7 @@ urlpatterns = [
     
     # Profile
     path('profile/<int:pk>/', views.ProfilePage.as_view(), name="profile"),
+    path('profile/<int:pk>/update', views.ProfileUpdate.as_view(), name="profile_update"),
 
     # Post Project
     path('project/', views.ProjectList.as_view(),name="project_list"),

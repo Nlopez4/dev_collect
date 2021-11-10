@@ -7,4 +7,7 @@
 <p>{{profile.bio}}</p>
 <p>{{profile.github}}</p>
 <p>{{profile.skills}}</p>
+
+<!-- UPDATE PROFILE -->
+<a href="{% url 'profile_update' user.pk %}">Edit Profile</a>
 {% endblock %}
