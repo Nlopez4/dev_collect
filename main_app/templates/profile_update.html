@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+
+
+    <form class="modal-form" method="post">
+      
+      <h1>Update Profile</h1>
+
+      {% csrf_token %} {{ form.as_p }}
+
+      <input type="submit"nvalue="UPDATE" />
+    </form>
+  </main>
+</div>
+{% endblock %}

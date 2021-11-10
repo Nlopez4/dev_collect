@@ -4,18 +4,19 @@ from django.views.generic.base import TemplateView
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Project, Profile
-from .forms import ProjectForm
+from django.contrib.auth.models import User
+from .forms import ProjectForm, ProfileForm
 
 
 from django.shortcuts import render, redirect, reverse
 
 
-# Create your views here.
+
 
 class Home(TemplateView):
     template_name = "home.html"
     
-    
+# Profile
 class ProfilePage(TemplateView):
     model = Profile
     template_name = "profile.html"
@@ -27,7 +28,13 @@ class ProfilePage(TemplateView):
         context["profile"] = profile
         return context
 
-
+class ProfileUpdate(UpdateView):
+    model = Profile
+    form_class = ProfileForm
+    template_name = "profile_update.html"
+    
+    def get_success_url(self):
+        return reverse('profile', kwargs={'pk': self.object.pk})
 
 # CRUD for Project
 class ProjectCreate(CreateView):
