@@ -1,4 +1,10 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Profile</h1>
-
+<h1>Hello {{user.username}}</h1>
+<div class="profile-header-image-container" style="background-image: url('{{profile.image.url}}');">
+            </div>
+<p>{{profile.name}}</p>
+<p>{{profile.email}}</p>
+<p>{{profile.bio}}</p>
+<p>{{profile.github}}</p>
+<p>{{profile.skills}}</p>
 {% endblock %}
