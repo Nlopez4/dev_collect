@@ -7,9 +7,12 @@ class Profile(models.Model):
     name = models.CharField(max_length=300)
     image = models.FileField(blank=True, null=True, upload_to='profile/')
     email = models.EmailField(max_length=500)
-    bio = models.CharField(max_length=1000)
+    bio = models.TextField(max_length=3000)
     github = models.CharField(max_length=2000, null=True, blank=True)
     skills = models.ManyToManyField('Skills', blank=True)
+    
+    def __str__(self):
+        return self.user
 
 class Project(models.Model):
     title = models.CharField(max_length=200)
