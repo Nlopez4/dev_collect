@@ -38,12 +38,7 @@ class ProjectUpdate(UpdateView):
     template_name = "project_update.html"
     success_url = "/project/"
     
-    def form_valid(self, form, **kwargs):
-        form.instance.profile = self.request.user.profile
-        return super(ProjectUpdate, self).form_valid(form)
-
-    def get_success_url(self, **kwargs):
-        return reverse('project_detail', kwargs={'pk': self.request.user.pk})
+  
 
 class ProjectDelete(DeleteView):
     model = Project
