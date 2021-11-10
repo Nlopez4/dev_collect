@@ -4,7 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.Home.as_view(), name="home"),  # splash page
     # AUTH
-    path('accounts/', include('django.contrib.auth.urls')),
+   
     
     # Profile
     path('profile/<int:pk>/', views.ProfilePage.as_view(), name="profile"),
