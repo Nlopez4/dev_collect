@@ -11,12 +11,12 @@ from .forms import ProjectForm, ProfileForm
 from django.shortcuts import render, redirect, reverse
 
 
-
-
 class Home(TemplateView):
     template_name = "home.html"
-    
+
 # Profile
+
+
 class ProfilePage(TemplateView):
     model = Profile
     template_name = "profile.html"
@@ -28,52 +28,65 @@ class ProfilePage(TemplateView):
         context["profile"] = profile
         return context
 
+
 class ProfileUpdate(UpdateView):
     model = Profile
     form_class = ProfileForm
     template_name = "profile_update.html"
-    
+
+    def updateProfile(request):
+        form = ProfileForm()
+        if request.method == "POST":
+            form = ProfileUpdate(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+
     def get_success_url(self):
         return reverse('profile', kwargs={'pk': self.object.pk})
 
 # CRUD for Project
+
+
 class ProjectCreate(CreateView):
     model = Project
     fields = ['title', 'description', 'skills', 'github_link', 'site_link']
     template_name = "project_create.html"
     success_url = "/project/"
-    
+
     def form_valid(self, form):
         form.instance.profile = self.request.user.profile
         return super(ProjectCreate, self).form_valid(form)
-    
+
     def get_success_url(self):
         print(self.kwargs)
         return reverse('project_list')
+
 
 class ProjectUpdate(UpdateView):
     model = Project
     fields = ['title', 'description', 'skills', 'github_link', 'site_link']
     template_name = "project_update.html"
     success_url = "/project/"
-    
-  
+
 
 class ProjectDelete(DeleteView):
     model = Project
     template_name = "project_delete_confirmation.html"
     success_url = "/project/"
 
+
 def get_success_url(self):
-        return reverse('project', kwargs={'pk': self.request.user.pk})
+    return reverse('project', kwargs={'pk': self.request.user.pk})
 
 # PROJECT
+
+
 class ProjectList(TemplateView):
     template_name = "project_list.html"
-    
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["projects"] = Project.objects.all() 
+        context["projects"] = Project.objects.all()
         return context
 
 
@@ -83,9 +96,5 @@ class ProjectDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["projects"] = Project.objects.all() 
+        context["projects"] = Project.objects.all()
         return context
-
-
-    
-
