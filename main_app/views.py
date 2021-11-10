@@ -25,6 +25,7 @@ class ProjectCreate(CreateView):
     success_url = "/project/"
     
     def form_valid(self, form):
+        form.instance.profile = self.request.user.profile
         return super(ProjectCreate, self).form_valid(form)
     
     def get_success_url(self):
@@ -36,13 +37,21 @@ class ProjectUpdate(UpdateView):
     fields = ['title', 'description', 'skills', 'github_link', 'site_link']
     template_name = "project_update.html"
     success_url = "/project/"
+    
+    def form_valid(self, form, **kwargs):
+        form.instance.profile = self.request.user.profile
+        return super(ProjectUpdate, self).form_valid(form)
+
+    def get_success_url(self, **kwargs):
+        return reverse('project_detail', kwargs={'pk': self.request.user.pk})
 
 class ProjectDelete(DeleteView):
     model = Project
     template_name = "project_delete_confirmation.html"
     success_url = "/project/"
 
-
+def get_success_url(self):
+        return reverse('project', kwargs={'pk': self.request.user.pk})
 
 # PROJECT
 class ProjectList(TemplateView):
