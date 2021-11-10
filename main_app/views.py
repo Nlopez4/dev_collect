@@ -3,7 +3,7 @@ from django.views import View
 from django.views.generic.base import TemplateView
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Project
+from .models import Project, Profile
 from .forms import ProjectForm
 
 
@@ -14,10 +14,22 @@ from django.shortcuts import render, redirect, reverse
 
 class Home(TemplateView):
     template_name = "home.html"
+    
+    
+class ProfilePage(TemplateView):
+    model = Profile
+    template_name = "profile.html"
+    ordering = ['created_at']
+
+    def get_context_data(self, pk, **kwargs):
+        profile = Profile.objects.get(pk=pk)
+        context = super().get_context_data(**kwargs)
+        context["profile"] = profile
+        return context
 
 
 
-# CRUD
+# CRUD for Project
 class ProjectCreate(CreateView):
     model = Project
     fields = ['title', 'description', 'skills', 'github_link', 'site_link']
