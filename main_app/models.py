@@ -19,6 +19,7 @@ class Profile(models.Model):
 
 class Project(models.Model):
     title = models.CharField(max_length=200)
+    owner = models.ForeignKey(Profile, on_delete=models.CASCADE)
     description = models.TextField(null=True, blank=True)
     skills = models.CharField(max_length=500)
     github_link = models.CharField(max_length=2000, null=True, blank=True)
