@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.Home.as_view(), name="home"),  # splash page
     # AUTH
+     path('registration/signup/', views.Signup.as_view(), name="signup"),
    
     
     # Profile

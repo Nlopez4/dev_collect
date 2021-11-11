@@ -1,11 +1,13 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.views import View
 from django.views.generic.base import TemplateView
 from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Project, Profile
-from django.contrib.auth.models import User
 from .forms import ProjectForm, ProfileForm
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login
 
 
 from django.shortcuts import render, redirect, reverse
@@ -14,9 +16,26 @@ from django.shortcuts import render, redirect, reverse
 class Home(TemplateView):
     template_name = "home.html"
 
+class Signup(View):
+    # show a form to fill out
+    def get(self, request):
+        form = UserCreationForm()
+        context = {"form": form}
+        return render(request, "registration/signup.html", context)
+    # on form submit validate the form and login the user.
+    def post(self, request):
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("project_list")
+        else:
+            context = {"form": form}
+            return render(request, "registration/signup.html", context)
+
+
+
 # Profile
-
-
 class ProfilePage(TemplateView):
     model = Profile
     template_name = "profile.html"
@@ -86,7 +105,12 @@ class ProjectList(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["projects"] = Project.objects.all()
+        name = self.request.GET.get("name")
+
+        if name != None:
+            context["projects"] = Project.objects.filter(name__icontains=name)
+        else:
+            context["projects"] = Project.objects.all()
         return context
 
 
