@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=300)
-    image = models.ImageField(blank=True, null=True, default="default.jpeg")
+    image = models.ImageField(blank=True, null=True, upload_to='profile/', default="default.jpeg")
     email = models.EmailField(max_length=500)
     bio = models.TextField(max_length=3000)
     github = models.CharField(max_length=2000, null=True, blank=True)
