@@ -8,6 +8,14 @@
 <p>{{profile.github}}</p>
 <p>{{profile.skills}}</p>
 
+<!-- Projects-->
+
+<ul>
+  {% for project in projects %}
+</ul>
+{% endfor %}
 <!-- UPDATE PROFILE -->
+{% if user.username == profile.user.username %}
 <a href="{% url 'profile_update' user.pk %}">Edit Profile</a>
+{% endif %}
 {% endblock %}
