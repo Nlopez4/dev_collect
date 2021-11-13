@@ -5,17 +5,28 @@
 <p>{{profile.name}}</p>
 <p>{{profile.email}}</p>
 <p>{{profile.bio}}</p>
-<p>{{profile.github}}</p>
 <p>{{profile.skills}}</p>
 
-<!-- Projects-->
 
-<ul>
-  {% for project in projects %}
-</ul>
-{% endfor %}
+<p>{{profile.github}}</p>
+<p>{{profile.site_link}}</p>
+
+
+
 <!-- UPDATE PROFILE -->
 {% if user.username == profile.user.username %}
 <a href="{% url 'profile_update' user.pk %}">Edit Profile</a>
+<!-- Projects-->
+<h2>My Projects </h2>
+<ul>
+  {% for project in profile.project_set.all  %}
+  <li><a href="{% url 'project_detail' project.pk %}">
+  {{ project.title }}
+  </li>
+</ul>
+{% endfor %}
+
+
+
 {% endif %}
 {% endblock %}

@@ -85,7 +85,7 @@ class ProjectCreate(CreateView):
 
     def get_success_url(self):
         print(self.kwargs)
-        return reverse('project_list', kwargs={'pk': self.object.pk})
+        return reverse('project_list')
 
 
 @method_decorator(login_required, name='dispatch')
