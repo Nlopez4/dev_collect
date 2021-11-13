@@ -95,7 +95,7 @@ class ProjectUpdate(UpdateView):
     template_name = "project_update.html"
     success_url = "/project/"
 
-    def project_update(pk, request):
+def project_update(pk, request):
         profile = request.user.profile
         project = profile.project_set.get(pk=pk)
 
@@ -106,6 +106,9 @@ class ProjectDelete(DeleteView):
     template_name = "project_delete_confirmation.html"
     success_url = "/project/"
 
+def project_delete(pk, request):
+        profile = request.user.profile
+        project = profile.project_set.get(pk=pk)
 
 def get_success_url(self):
     return reverse('project', kwargs={'pk': self.request.user.pk})

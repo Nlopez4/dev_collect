@@ -10,9 +10,12 @@
 <p>{{project.site_link}}</p>
 <p>{{project.created}}</p>
 
-
+<!-- UPDATE AND DELETE POST-->
+{% if user.is_authenticated %}
+{% if user.profile == project.profile %}
 <a href="{% url 'project_update' project.pk %}">EDIT</a>
 <a href="{% url 'project_delete' project.pk %}">DELETE</a>
-
+{% endif %}
+{% endif %}
 </div>
 {% endblock %}
