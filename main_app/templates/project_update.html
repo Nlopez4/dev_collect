@@ -1,16 +1,9 @@
-{% extends 'base.html' %} {% block content %}
-
-{% if user.is_authenticated %}
+{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %} 
 {% if user.profile == project.profile %}
 <h1 class="pt-3">Update {{project.title}}</h1>
 
 <form action="" method="post">
   {% csrf_token %} {{form.as_p}} <input type="submit" value="Submit" />
 </form>
-{% else %}
-Sorry, only users can edit!
-{% endif %}
-{% else %}
-Sorry, only users can edit!
-{% endif %}
-{% endblock %}
+{% else %} Sorry, only users can edit! {% endif %} {% else %} Sorry, only users
+can edit! {% endif %} {% endblock %}

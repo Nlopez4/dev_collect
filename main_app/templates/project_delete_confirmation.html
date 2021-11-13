@@ -1,13 +1,15 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} {% block content %} 
+{% if user.is_authenticated %} 
+{% if user.profile == project.profile %}
 <h1>Are you sure you want to Delete?</h1>
 <form method="POST">
   {% csrf_token %}
   <div class="buttons">
     <input type="submit" value="Confirm" />
     <!-- Redirect back to detail on cancel -->
-    <a href="{% url 'project_detail' project.pk %}"
-      >Cancel</a
-    >
+    <a href="{% url 'project_detail' project.pk %}">Cancel</a>
   </div>
 </form>
+{% else %} Sorry, only users can delete! {% endif %} {% else %} Sorry, only
+users can delete! {% endif %} 
 {% endblock %}
