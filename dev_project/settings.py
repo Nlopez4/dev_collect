@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import dj_database_url
 from pathlib import Path
 import os
 import environ
@@ -30,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'change-in-production')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['devcollect.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'devcollect.herokuapp.com']
 
 
 # Application definition
@@ -139,5 +140,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/project/'
 LOGOUT_REDIRECT_URL = '/project/'
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASES['default'] = dj_database_url.config(
+    conn_max_age=600, ssl_require=True)
