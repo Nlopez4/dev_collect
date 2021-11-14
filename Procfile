@@ -1,1 +1,1 @@
-web: gunicorn devcollect.wsgi 
+web: gunicorn dev_project.wsgi 
