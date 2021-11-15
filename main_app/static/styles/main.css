@@ -2,13 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap");
 
+
+
+
 body {
   background-color: black;
+  color: white;
 }
 
-/* :root {
-    
-} */
 
 /* NAV */
 .nav-bar {
