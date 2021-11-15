@@ -4,7 +4,7 @@
 
 
 body {
-    background-color: white;
+    background-color: black;
 }
 
 
@@ -19,13 +19,12 @@ body {
    display: flex;
    justify-content: space-around;
 
-   
     
 }
 
 .splash-link {
     text-decoration: none;
-    color: black;
+    color: white;
     font-family: Quicksand;
 }
 
@@ -41,6 +40,7 @@ body {
     width: 100%;
     font-family: pacifico, sans-serif;
     font-size: 50px;
+    color: white;
     
 }
 

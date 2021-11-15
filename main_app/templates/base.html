@@ -21,11 +21,11 @@
   <a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
 
 {% if user.is_authenticated %}
-  Hi {{ user.username }}!
+  {% comment %} Hi {{ user.username }}! {% endcomment %}
   <a class="splash-link" href="{% url 'logout' %}">Log Out</a>
  <a class="splash-link" href="{% url 'profile' user.pk %}">Profile</a>
 {% else %}
-  <p>You are not logged in</p>
+  {% comment %} <p>You are not logged in</p> {% endcomment %}
   <a class="splash-link" href="{% url 'login' %}">Log In</a>
    <a class="splash-link" href="{% url 'signup' %}">Register</a>
 {% endif %}
