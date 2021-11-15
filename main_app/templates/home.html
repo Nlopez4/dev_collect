@@ -1,6 +1,5 @@
-{% extends 'base.html' %} {% block content %} {% load static %}
-<h1 class="splash-h1">Search for Projects</h1>
-<img class="splash-image" src="{% static 'splash_page_image1.png'%}"/>
+{% extends 'base.html' %} {% block content %} {% load static %}  
+
 
 {% if user.is_authenticated %}
 
@@ -10,4 +9,11 @@
 <p>You are not logged in</p>
 <a href="{% url 'login' %}">Log In</a>
 <a href="{% url 'signup' %}">Register</a>
-{% endif %} {% endblock %}
+{% endif %} 
+
+<h1 class="splash-h1">Search for Projects</h1>
+<div>
+<img class="splash-image" src="{% static 'images/splash_page_image1.png' %}" />
+</div>
+
+{% endblock %}
