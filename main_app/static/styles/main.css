@@ -8,9 +8,19 @@ body {
 /* :root {
     
 } */
+
+
 /* NAV */
+.nav-bar {
+   display: inline;
+   font-size: 20px;
+   text-decoration: none;
+    
+}
 
-
+.splash-link {
+    text-decoration: none;
+}
 
 
 /* SPLASH PAGE */ 
