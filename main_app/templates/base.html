@@ -1,5 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 
 <html lang="en">
   <head>
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="{% static 'styles/main.css' %}" />
+      <link rel="stylesheet" href='{% static "styles/main.css" %}' />
     <script src="{% static 'scripts/main.js' %}" defer></script>
   
     <title>dev collect</title>
@@ -15,20 +15,21 @@
   <body >
 
   <!-- NAV BAR -->
-   <a href="{% url 'home' %}">Home</a>
-  <a class="nav-link" href="{% url 'project_list' %}">My Projects</a>
-  <a href="{% url 'project_create' %}">Add Project</a>
+  <div class="nav-bar">
+   <a class="splash-link" href="{% url 'home' %}">Home</a>
+  <a class="splash-link" href="{% url 'project_list' %}">My Projects</a>
+  <a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
 
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
-  <a href="{% url 'logout' %}">Log Out</a>
- <a href="{% url 'profile' user.pk %}">Profile</a>
+  <a class="splash-link" href="{% url 'logout' %}">Log Out</a>
+ <a class="splash-link" href="{% url 'profile' user.pk %}">Profile</a>
 {% else %}
   <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
-   <a href="{% url 'signup' %}">Register</a>
+  <a class="splash-link" href="{% url 'login' %}">Log In</a>
+   <a class="splash-link" href="{% url 'signup' %}">Register</a>
 {% endif %}
-
+</div>
     
           {% block content %}{% endblock %}
      
