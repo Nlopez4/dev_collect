@@ -1,62 +1,65 @@
 /* GLOBAL */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap");
 
 body {
-    background-color: black;
+  background-color: black;
 }
-
 
 /* :root {
     
 } */
 
-
 /* NAV */
 .nav-bar {
-   font-size: 20px;
-   display: flex;
-   justify-content: space-evenly;
-    padding: 14px 16px;
-    
-    
-   
-    
+  font-size: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 14px 16px;
 }
 
 .splash-link {
-    text-decoration: none;
-    color: white;
-    font-family: Quicksand;
-    
-    
-    
+  text-decoration: none;
+  color: white;
+  font-family: Quicksand;
 }
 
-
-/* SPLASH PAGE */ 
+/* SPLASH PAGE */
 .splash-h1 {
-    left: 0;
-    line-height: 200px;
-    margin-top: -300px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 100%;
-    font-family: pacifico, sans-serif;
-    font-size: 50px;
-    color: white;
-    
+  left: 0;
+  line-height: 200px;
+  margin-top: -320px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  font-family: pacifico, sans-serif;
+  font-size: 50px;
+  color: white;
 }
 
 .splash-image {
-    width: 40%;
-    height: 40%;
-    object-fit: contain;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
+  width: 40%;
+  height: 40%;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -110px;
+}
+
+/* SPLASH PAGE: SEARCH BAR */
+.search-form {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box {
+  background: grey;
+  position: relative;
+  padding: 15px;
+  border-radius: 40px;
+  display: flex;
 }
