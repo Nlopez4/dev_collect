@@ -18,9 +18,7 @@ body {
 .nav-bar {
    font-size: 20px;
    display: flex;
-   justify-content: flex-end;
-   word-spacing: 1rem; 
-
+   justify-content: space-evenly;
     padding: 14px 16px;
     
     
@@ -32,6 +30,7 @@ body {
     text-decoration: none;
     color: white;
     font-family: Quicksand;
+    
     
     
 }
