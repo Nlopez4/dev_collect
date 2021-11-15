@@ -15,6 +15,7 @@
 
 <!-- UPDATE PROFILE -->
 {% if user.username == profile.user.username %}
+ <a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
 <a href="{% url 'profile_update' user.pk %}">Edit Profile</a>
 <!-- Projects-->
 <h2>My Projects </h2>

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap');
 
 
+
 body {
     background-color: black;
 }
@@ -17,8 +18,13 @@ body {
 .nav-bar {
    font-size: 20px;
    display: flex;
-   justify-content: space-around;
+   justify-content: flex-end;
+   word-spacing: 1rem; 
 
+    padding: 14px 16px;
+    
+    
+   
     
 }
 
@@ -26,6 +32,8 @@ body {
     text-decoration: none;
     color: white;
     font-family: Quicksand;
+    
+    
 }
 
 
@@ -33,7 +41,7 @@ body {
 .splash-h1 {
     left: 0;
     line-height: 200px;
-    margin-top: -400px;
+    margin-top: -300px;
     position: absolute;
     text-align: center;
     top: 50%;
