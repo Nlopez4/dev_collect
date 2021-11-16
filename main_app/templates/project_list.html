@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Projects List</h1>
+<h1 class="project-h1">Projects from Devs</h1>
 
 <ul>
   {% for project in projects %}
@@ -9,7 +9,7 @@
 <!-- Project Cards -->
 <div class="card">
         <div class="header">
-            <p>The Header</p>
+            <p><a href="{% url 'project_detail' project.pk %}"</a>{{ project.title }}</p>
         </div>
             <div class="container">
             <p>Some random texts</p>
