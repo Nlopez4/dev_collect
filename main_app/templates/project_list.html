@@ -1,21 +1,16 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Projects List</h1>
+<h1 class="project-h1">Projects from Devs</h1>
 
-<ul>
+
   {% for project in projects %}
-  <li><a href="{% url 'project_detail' project.pk %}"</a>
-  {{ project.title }} By: {{ project.profile }} </li>
-</ul>
+
 <!-- Project Cards -->
 <div class="card">
         <div class="header">
-            <p>The Header</p>
+            <p><a href="{% url 'project_detail' project.pk %}"</a>{{ project.title }}</p>
         </div>
             <div class="container">
-            <p>Some random texts</p>
-            <p>Yet another texts</p>
-            <p>Even more texts</p>
-            <p>I should probably make programming puns</p>
+            <p>{{ project.description }}</p>
         </div>
     </div>
 {% endfor %} {% endblock %}
