@@ -2,14 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap");
 
-
-
-
 body {
   background-color: black;
   color: white;
 }
-
 
 /* NAV */
 .nav-bar {
@@ -28,7 +24,7 @@ body {
 /* SPLASH PAGE */
 .splash-h1 {
   left: 0;
-  margin-top: -300px;
+  margin-top: -280px;
   position: absolute;
   text-align: center;
   top: 50%;
@@ -57,14 +53,19 @@ body {
   align-items: center;
 }
 
-.search-box {
+.query {
+  border-radius: 40px;
+  width: 400px;
+  height: 40px;
+}
+
+/* .search-box {
   background: grey;
   position: relative;
   padding: 15px;
   border-radius: 40px;
   display: flex;
-}
-
+} */
 
 /* ================================================================= */
 /* PROJECT LIST PAGE */
@@ -80,7 +81,6 @@ body {
   font-size: 50px;
   color: white;
 }
-
 
 /* PROJECT CARDS */
 .card {
