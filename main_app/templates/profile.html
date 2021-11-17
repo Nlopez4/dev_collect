@@ -1,21 +1,23 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
-<h1>Hello {{user.username}}</h1>
-<img style="max-width: 200px"src="{{ profile.image.url }}"
-        
-<p>{{profile.name}}</p>
-<p>{{profile.email}}</p>
-<p>{{profile.bio}}</p>
-<p>{{profile.skills}}</p>
 
-
-<p>{{profile.github}}</p>
-<p>{{profile.site_link}}</p>
-
-
+<!-- PROFILE -->
+<h1 class="profile-user-h1">Hello {{user.username}}</h1>
+<div class="profile-container">
+  <div class="user-info">
+    <img class="profile-img" style="max-width: 250px"src="{{ profile.image.url }}">
+  </div>
+  <div class="user-extras">
+    <p class="profile-email-p">{{profile.email}}</p>
+    <p>{{profile.bio}}</p>
+    <p>{{profile.skills}}</p>
+    <p>{{profile.github}}</p>
+    <p>{{profile.site_link}}</p>
+  </div>
+</div>
 
 <!-- UPDATE PROFILE -->
 {% if user.username == profile.user.username %}
- <a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
+<a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
 <a href="{% url 'profile_update' user.pk %}">Edit Profile</a>
 <!-- Projects-->
 <h2>My Projects </h2>
