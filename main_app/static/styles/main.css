@@ -95,16 +95,17 @@ body {
   flex-wrap: nowrap;
 
 
-  max-width: 800px;
-  max-height: 800px;
+  max-width: 400px;
+  max-height: 1000px;
   margin: 0 auto;
   margin-top: 30vh;
   border: 1px solid white;
   border-radius: 20px;
-  background-color: white;
+  background: white;
   color: black;
 
 }
+
 
 .card-details {
   padding: 10px;
@@ -113,11 +114,15 @@ body {
 }
 
 .card-h1 {
+  text-align: center;
   text-transform: uppercase;
+  font-family: Josefin Sans;
+  font-weight: bold;
 }
 
-.card-p, .tags {
+.card-p, .tags, .project-info {
   color: grey;
+  font-family: roboto;
 }
 
 /* ======================================== */
@@ -128,7 +133,6 @@ body {
   font-size: 70px;
   text-align: center;
 }
-
 
 
 .profile-container {
@@ -142,9 +146,21 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
-  width: 700px;
-  height: 450px;
+  max-width: 700px;
+  max-height: 950px;
   border-radius: 40px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .profile-img {
@@ -155,17 +171,6 @@ body {
 
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
 
 .user-extras {
   padding: 20px

@@ -2,6 +2,7 @@
 
 <!-- PROFILE -->
 <h1 class="profile-user-h1">Hello {{user.username}}</h1>
+
 <div class="profile-container">
   <div class="user-info">
     <img class="profile-img" style="max-width: 250px"src="{{ profile.image.url }}">
@@ -15,15 +16,11 @@
     <p class="links-p">Sites</p>
     <p class="github-link">{{profile.github}}</p>
     <p class="site-link">{{profile.site_link}}</p>
-
-    
-      </a>
   </div>
     <a class="edit-profile-button" href="{% url 'profile_update' user.pk %}">Edit Profile</a>
   </div>
-</div>
 
-<!-- UPDATE PROFILE -->
+  <!-- UPDATE PROFILE -->
 {% if user.username == profile.user.username %}
 <a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
 <!-- Projects-->
@@ -39,4 +36,7 @@
 
 
 {% endif %}
+</div>
+
+
 {% endblock %}

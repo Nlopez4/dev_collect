@@ -17,14 +17,16 @@
 
 <div class="container">
   <div class="card">
-    <img src="{{ profile.image }}">
   </div>
     <div class="card-details">
         <h1 class="card-h1">{{ project.title }}</h1>
+        <p>By:{{ project.profile }}</p>
+    <div class="project-info">
         <p class="card-p">{{ project.description }}</p>
         <span class="tags">Skills:{{ project.skills }}</span>
         <p class="card-p">Github:{{ project.github_link }}</p>
         <p class="card-p">Website:{{ project.site_link }}</p>
+    </div>
     </div>
 </div>
 
