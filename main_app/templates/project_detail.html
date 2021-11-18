@@ -4,18 +4,24 @@
 
 <h1 class="project-det-title">{{project.title}}</h1>
 <div class="det-container">
+    <div class="project-dets">
+    <p class="p-reg">Description</p>
     <p class="project-det">{{project.description}}</p>
+    <p class="p-reg">Tech Used</p>
     <p class="project-det">{{project.tech_used}}</p>
+    <p class="p-reg">Project Sites</p>
     <p class="project-det">{{project.github_link}}</p>
     <p class="project-det">{{project.site_link}}</p>
+    <p class="p-reg">Created</p>
     <p class="project-det">{{project.created}}</p>
+    </div>
 </div>
 
 <!-- UPDATE AND DELETE POST-->
 {% if user.is_authenticated %}
 {% if user.profile == project.profile %}
-<a href="{% url 'project_update' project.pk %}">EDIT</a>
-<a href="{% url 'project_delete' project.pk %}">DELETE</a>
+<a class="project-buttons" href="{% url 'project_update' project.pk %}">EDIT</a>
+<a class="project-buttons" href="{% url 'project_delete' project.pk %}">DELETE</a>
 {% endif %}
 {% endif %}
 </div>

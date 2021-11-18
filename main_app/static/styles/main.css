@@ -231,6 +231,7 @@ a {
   float: right;
   margin-top: -500px;
   margin-top: -37em;
+  font-family: roboto;
   text-overflow: hidden;
 }
 
@@ -243,24 +244,17 @@ a {
   padding: 10px;
 }
 
-.user-links {
-}
+
 
 .bio-p,
 .skills-p,
 .myprojects-h2 {
-  font-family: Noto Serif, serif;
   font-size: 30px;
+  text-transform: uppercase;
+  font-family: Josefin Sans;
   /* margin-top: 35px; */
 }
 
-.skills-p {
-  /* margin-top: 60px; */
-}
-
-.myprojects-h2 {
-  /* margin-top: 60px; */
-}
 
 .myprojects-list {
   text-decoration: none;
@@ -306,14 +300,41 @@ a {
   animation: gradient 15s ease infinite;
   min-width: 870px;
   max-width: 870px;
-  min-height: 450px;
-  max-height: 450px;
+  min-height: 600px;
+  max-height: 600px;
   border-radius: 40px;
   box-shadow: rgba(243, 239, 239, 0.4);
 
 }
 
-.edit-profile-button {
-  text-decoration: none;
+
+
+.project-buttons {
+  float: right;
+  margin-top: 170px;
+  background-color: white;
+  color: black;
+  width: 60px;
+  height: 25px;
+  border-radius: 20px;
+  cursor:pointer;
+  font-family: Noto Serif, serif;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  
 }
 
+.project-dets {
+  text-align: justify;
+  text-justify: right;
+  font-family: roboto;
+  display: grid;
+  grid-gap: 1px;
+  padding: 50px;
+}
+
+.p-reg {
+  
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: Josefin Sans;
+}
