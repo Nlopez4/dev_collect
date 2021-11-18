@@ -20,7 +20,7 @@
     </div>
     <a class="edit-profile-button" href="{% url 'profile_update' user.pk %}">Edit Profile</a>
   </div>
-
+</div>
 
   <!-- UPDATE PROFILE -->
 {% if user.username == profile.user.username %}
@@ -32,11 +32,7 @@
   {{ project.title }}
 
 {% endfor %}
-
-
-
 {% endif %}
-</div>
 
 
 {% endblock %}
