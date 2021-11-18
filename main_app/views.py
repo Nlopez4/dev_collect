@@ -125,7 +125,7 @@ class ProjectList(TemplateView):
         title = self.request.GET.get("title")
 
         if title != None:
-            context["projects"] = Project.objects.filter(name__icontains=title)
+            context["projects"] = Project.objects.filter(title__icontains=title)
         else:
             context["projects"] = Project.objects.all()
         return context
