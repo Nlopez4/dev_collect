@@ -29,6 +29,7 @@
       </ul>
       {% endfor %}
     </div>
+    <a class="edit-profile-button" href="{% url 'profile_update' user.pk %}">Edit Profile</a>
     <button class="edit-profile" onclick="{% url 'profile_update' user.pk %}">Edit</button>
   </div>
 </div>
