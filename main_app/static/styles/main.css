@@ -111,6 +111,7 @@ body {
   margin-top: 30vh;
   border: 1px solid white;
   border-radius: 20px;
+  padding: 17px;
   background: white;
   color: black;
   
@@ -139,6 +140,11 @@ body {
   text-transform: uppercase;
   font-family: Josefin Sans;
   font-weight: bold;
+}
+
+.project-by {
+  color: black;
+  text-align: center;
 }
 
 .card-p,
