@@ -6,17 +6,28 @@
 <div class="profile-container">
   <div class="user-info">
     <img class="profile-img" style="max-width: 250px"src="{{ profile.image.url }}">
-     <p class="profile-email-p">{{profile.email}}</p>
-     <p class="github-link">{{profile.github}}</p>
-     <p class="site-link">{{profile.site_link}}</p>
+    <div class="user-links">
+      <p class="profile-email-p">{{profile.email}}</p>
+      <p class="github-link">{{profile.github}}</p>
+      <p class="site-link">{{profile.site_link}}</p>
+     </div>
   </div>
 
   <div class="user-extras">
     <div class="user-intro">
+      <p class="bio-p">Bio</p>
       <p>{{profile.bio}}</p>
       <p class="skills-p">Skills</p>
       <p class="skills">{{profile.skills}}</p>
-      <p class="links-p">Sites</p>
+      <h2 class="myprojects-h2">My Projects </h2>
+      {% for project in profile.project_set.all  %}
+      <a href="{% url 'project_detail' project.pk %}">
+      <ul>
+        <li class="myprojects-list">
+          {{ project.title }}
+        </li>
+      </ul>
+      {% endfor %}
     </div>
     <a class="edit-profile-button" href="{% url 'profile_update' user.pk %}">Edit Profile</a>
   </div>
@@ -26,12 +37,9 @@
 {% if user.username == profile.user.username %}
 <a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
 <!-- Projects-->
-<h2>My Projects </h2>
-  {% for project in profile.project_set.all  %}
-  <a href="{% url 'project_detail' project.pk %}">
-  {{ project.title }}
 
-{% endfor %}
+
+
 {% endif %}
 
 
