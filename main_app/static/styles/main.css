@@ -74,9 +74,6 @@ body {
 /* ================================================================= */
 /* PROJECT LIST PAGE */
 
-a {
-  text-decoration: none;
-}
 
 
 .project-h1 {
@@ -147,6 +144,10 @@ a {
 
 /* ======================================== */
 /* PROFILE PAGE */
+
+a {
+  text-decoration: none;
+}
 
 .profile-user-h1 {
   font-family: pacifico, cursive;
@@ -263,17 +264,19 @@ a {
 
 
 .edit-profile {
-  text-align: center;
-  justify-content:center;
-  margin-left: -22em;
+  float: right;
   margin-top: 170px;
   background-color: white;
   color: black;
   width: 60px;
-  height: 30px;
+  height: 25px;
   border-radius: 20px;
   cursor:pointer;
   font-family: Noto Serif, serif;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   
+}
+
+.edit-profile-button {
+  text-decoration: none;
 }
