@@ -82,8 +82,6 @@ body {
 /* PROJECT LIST PAGE */
 
 
-
-
 .project-h1 {
   left: 0;
   margin-top: -300px;
@@ -152,6 +150,10 @@ body {
 
 /* ======================================== */
 /* PROFILE PAGE */
+
+a {
+  text-decoration: none;
+}
 
 .profile-user-h1 {
   font-family: pacifico, cursive;
@@ -268,20 +270,19 @@ body {
 
 
 .edit-profile {
-  text-align: center;
-  justify-content:center;
-  margin-left: -22em;
+  float: right;
   margin-top: 170px;
   background-color: white;
   color: black;
   width: 60px;
-  height: 30px;
+  height: 25px;
   border-radius: 20px;
   cursor:pointer;
   font-family: Noto Serif, serif;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   
 }
+
 
 /* ======================================== */
 /* PROJECT DETAILS PAGE */
@@ -311,3 +312,8 @@ body {
   box-shadow: rgba(243, 239, 239, 0.4);
 
 }
+
+.edit-profile-button {
+  text-decoration: none;
+}
+
