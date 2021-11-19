@@ -10,11 +10,11 @@ class ProjectForm(forms.ModelForm):
         fields = ['title', 'description', 'skills', 'github_link', 'site_link']
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control mb-4 w-25 p-3 justify-content-center'}),
-            'description': forms.Textarea(attrs={'class': 'form-control mb-4 w-25 p-3'}),
-            'skills': forms.TextInput(attrs={'class': 'form-control mb-4 w-25 p-3'}),
-            'github_link': forms.TextInput(attrs={'class': 'form-control mb-4 w-25 p-3'}),
-            'site_link': forms.TextInput(attrs={'class': 'form-control mb-4 w-25 p-3'}),
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'description': forms.Textarea(attrs={'class': 'form-control'}),
+            'skills': forms.TextInput(attrs={'class': 'form-control'}),
+            'github_link': forms.TextInput(attrs={'class': 'form-control'}),
+            'site_link': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
 
