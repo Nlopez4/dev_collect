@@ -1,9 +1,13 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Create Project</h1>
+<h1 class="create-h1">Create Project</h1>
 
+<div class="form-group" class="form-group-2">
 <form method="POST">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" />
+<table>
+  {% csrf_token %} {{ form.as_table}}
+  <button type="submit" class="btn btn-secondary" class="update-sub">Submit</button>
+</table>
 </form>
+ </div>
 
 {% endblock %}

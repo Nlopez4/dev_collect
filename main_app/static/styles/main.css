@@ -208,6 +208,7 @@ a {
   float: left;
   margin-top: 60px;
   margin-left: 30px;
+  margin-bottom: 80px;
   border-radius: 60%;
   clip-path: circle();
 }
@@ -231,6 +232,10 @@ a {
   border-radius: 20px;
   margin-left: 15px;
   /* overflow-wrap: break-word; */
+}
+
+.user-links {
+  margin-top: 30px;;
 }
 
 .user-extras {
@@ -369,4 +374,33 @@ a {
 button {
   margin-left: 40% !important;
  
+}
+
+/* ======================================== */
+/* PROFILE UPDATE PAGE */
+
+.update-pro-h1 {
+  font-family: pacifico, cursive;
+  font-size: 70px;
+  text-align: center;
+  padding: 60px;
+}
+
+.form-group-pro {
+  width: 100% !important;
+  margin-left: 60% !important;
+} 
+
+/* ======================================== */
+/* CREATE PROJECT PAGE */
+
+.create-h1 {
+  font-family: pacifico, cursive;
+  font-size: 70px;
+  text-align: center;
+  padding: 60px;
+}
+.form-group-2 {
+  width: 100% !important;
+  margin-left: 70% !important;
 }

@@ -18,7 +18,32 @@ class ProjectForm(forms.ModelForm):
         }
 
 
-class ProfileForm(ModelForm):
+class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('name', 'image', 'email', 'bio', 'github', 'skills')
+
+    widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'image': forms.FileInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'bio': forms.Textarea(attrs={'class': 'form-control'}),
+            'skills': forms.TextInput(attrs={'class': 'form-control'}),
+            'github_link': forms.TextInput(attrs={'class': 'form-control'}),
+            
+        }
+    
+    
+class CreateForm(forms.ModelForm):
+    class Meta: Project 
+    fields = ['title', 'description', 'skills', 'github_link', 'site_link']
+    
+    widgets = {
+            'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'image': forms.FileInput(attrs={'class': 'form-control'}),
+            'email': forms.TextInput(attrs={'class': 'form-control'}),
+            'bio': forms.Textarea(attrs={'class': 'form-control'}),
+            'skills': forms.TextInput(attrs={'class': 'form-control'}),
+            'github_link': forms.TextInput(attrs={'class': 'form-control'}),
+            
+        }

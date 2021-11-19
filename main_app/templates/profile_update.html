@@ -1,14 +1,17 @@
 {% extends 'base.html' %} {% block content %}
 
 
-    <form class="modal-form" method="post" enctype="multipart/form-data">
-      
-      <h1>Update Profile</h1>
+<h1 class="update-pro-h1">Update Profile</h1>
 
-      {% csrf_token %} {{ form.as_p }}
-
-      <input type="submit"nvalue="UPDATE" />
-    </form>
-  </main>
+<div class="form-group" class="form-group-pro">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    <button type="submit" class="btn btn-secondary" class="update-sub">Submit</button>
+    </table>
+  </form>
 </div>
+
+
 {% endblock %}

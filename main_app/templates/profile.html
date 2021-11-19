@@ -22,6 +22,7 @@
       <h2 class="myprojects-h2">My Projects </h2>
       {% for project in profile.project_set.all  %}
       <a href="{% url 'project_detail' project.pk %}">
+      
       <ul>
         <li class="myprojects-list">
           {{ project.title }}
@@ -29,20 +30,15 @@
       </ul>
       {% endfor %}
     </div>
+    {% if user.username == profile.user.username %}
+<a class="splash-link" href="{% url 'project_create' %}">Add a project</a>
+{% endif %}
     <div class="edit-profile">
     <a class="edit-profile-button" href="{% url 'profile_update' user.pk %}">Edit</a>
     </div>
   </div>
 </div>
 
-  <!-- UPDATE PROFILE -->
-{% if user.username == profile.user.username %}
-<a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
-<!-- Projects-->
-
-
-
-{% endif %}
 
 
 {% endblock %}

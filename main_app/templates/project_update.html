@@ -6,8 +6,10 @@
   <div class="form-group" class="form-group">
   <form class="form-update" action="" method="post">
       {% csrf_token %}
-      {{ form.as_p }}
+      <table>
+   {{ form.as_table }}
       <button type="submit" class="btn btn-secondary" class="update-sub">Submit</button>
+      </table>
   </form>
   </div>
   
@@ -16,13 +18,5 @@
 {% else %} Sorry, only users can edit! {% endif %} {% else %} Sorry, only users
 can edit! {% endif %} {% endblock %}
 
- {% comment %}
-    <div class="form-title">{{ form.title }}</div>
-    <div class="form-title">{{ form.description }}</div>
-    <div class="form-title">{{ form.skills }}</div>
-    <div class="form-title">{{ form.github_link }}</div>
-    <div class="form-title">{{ form.site_link }}</div>
-    {% endcomment %}
 
-{% comment %} <input class="update-submit" type="submit" value="Submit" />  {% endcomment %}
     
