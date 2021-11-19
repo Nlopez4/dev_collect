@@ -1,10 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Log In</h1>
+<h1 class="login-h1">Log in to devcollect</h1>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
+  <table class="login">
+  {{ form.as_table }}
+  </table>
+  <div class="login-bttn">
+   <button type="submit">Log In</button>
+  </div>
 </form>
 
 {% endblock %}
