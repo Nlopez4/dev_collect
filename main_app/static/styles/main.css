@@ -404,3 +404,50 @@ button {
   width: 100% !important;
   margin-left: 70% !important;
 }
+
+/* ======================================== */
+/* LOG IN PAGE */
+
+.login-h1 {
+  font-family: pacifico, cursive;
+  font-size: 70px;
+  text-align: center;
+  padding: 30px;
+}
+
+.login {
+  justify-content:center;
+  margin-left: 40%;
+}
+
+.login-bttn {
+  margin-left: 10%;
+  justify-content:center;
+  margin-top: 40px; 
+  
+  align-items:center;
+  
+}
+
+/* ======================================== */
+/* REGISTER PAGE */
+
+.register-h1 {
+  font-family: pacifico, cursive;
+  font-size: 70px;
+  text-align: center;
+  padding: 30px;
+}
+
+.register {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.register-bttns {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top: 40px;
+}
