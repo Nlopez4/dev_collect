@@ -13,7 +13,6 @@ django-crispy-forms = "*"
 django-heroku = "*"
 gunicorn = "*"
 django-environ = "*"
-Pillow = “*”
 dj-database-url = “*”
 whitenoise = "*"
 
@@ -22,3 +21,4 @@ whitenoise = "*"
 
 [requires]
 python_version = "3.9"
+Pillow = "8.4.0"
