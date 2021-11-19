@@ -354,4 +354,12 @@ a {
 .project-update-container {
   text-align: center !important;
   justify-content: center !important;
+  
+}
+
+.update-h1 {
+  font-family: pacifico, cursive;
+  font-size: 70px;
+  text-align: center;
+  padding: 60px;
 }
