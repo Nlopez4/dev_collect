@@ -19,16 +19,17 @@ html {
 }
 
 body {
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
 }
 
 /* NAV */
 .nav-bar {
-  font-size: 20px;
+  font-size: 17px;
   display: flex;
   justify-content: space-evenly;
   padding: 14px 16px;
+  font-family: Josefin Sans;
 }
 
 .splash-link {
@@ -107,8 +108,8 @@ body {
   display: flex;
   flex-wrap: nowrap;
 
-  max-width: 400px;
-  max-height: 1000px;
+  max-width: 400px !important;
+  max-height: 1000px !important;
   margin: 0 auto;
   margin-top: 30vh;
   border: 1px solid white;
@@ -345,4 +346,12 @@ a {
   font-size: 20px;
   text-transform: uppercase;
   font-family: Josefin Sans;
+}
+
+/* ======================================== */
+/* PROJECT UPDATE PAGE */
+
+.project-update-container {
+  text-align: center !important;
+  justify-content: center !important;
 }

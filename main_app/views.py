@@ -91,7 +91,8 @@ class ProjectCreate(CreateView):
 @method_decorator(login_required, name='dispatch')
 class ProjectUpdate(UpdateView):
     model = Project
-    fields = ['title', 'description', 'skills', 'github_link', 'site_link']
+    form_class = ProjectForm
+    # fields = ['title', 'description', 'skills', 'github_link', 'site_link']
     template_name = "project_update.html"
     success_url = "/project/"
 
