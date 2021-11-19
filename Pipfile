@@ -7,18 +7,18 @@ name = "pypi"
 django = "*"
 psycopg2-binary = "*"
 django-storages = "*"
+boto3 = "*"
 seed = "*"
 django-seed = "*"
 django-crispy-forms = "*"
 django-heroku = "*"
 gunicorn = "*"
 django-environ = "*"
-dj-database-url = “*”
-whitenoise = "*"
+Pillow = "*"
 
 
 [dev-packages]
 
 [requires]
 python_version = "3.9"
-Pillow = "8.4.0"
+
