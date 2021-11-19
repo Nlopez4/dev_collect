@@ -75,7 +75,8 @@ class ProfileUpdate(UpdateView):
 @method_decorator(login_required, name='dispatch')
 class ProjectCreate(CreateView):
     model = Project
-    fields = ['title', 'description', 'skills', 'github_link', 'site_link']
+    form_class = ProfileForm
+    # fields = ['title', 'description', 'skills', 'github_link', 'site_link']
     template_name = "project_create.html"
     success_url = "/project/"
 
