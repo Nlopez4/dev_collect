@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 django = "*"
-psycopg2-binary = "*"
 django-storages = "*"
 boto3 = "*"
 seed = "*"
@@ -16,6 +15,38 @@ gunicorn = "*"
 django-environ = "*"
 dj-database-url = "*"
 Pillow = "*"
+
+asgiref = "*"
+autopep8 = "*"
+beautifulsoup4 = "*"
+botocore = "*"
+crispy-bootstrap5 = "*"
+django-bootstrap-v5 = "*"
+django-bootstrap5 = "*"
+django-crispy-forms = "*"
+
+django-storages = "*"
+django-widget-tweaks = "*"
+
+
+jmespath = "*"
+path.py = "*"
+
+postgres = "*"
+psycopg2 = "*"
+psycopg2-binary = "*"
+psycopg2-pool = "*"
+pycodestyle = "*"
+python-dateutil = "*"
+pytz = "*"
+s3transfer = "*"
+six = "*"
+soupsieve = "*"
+sqlparse = "*"
+text-unidecode = "*"
+toml = " = "*"
+urllib3 = "*"
+whitenoise = "*"
 
 [dev-packages]
 
