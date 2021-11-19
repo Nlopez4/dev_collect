@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% load bootstrap5 %} {% block content %} {% if user.is_authenticated %} 
 {% if user.profile == project.profile %}
-<h1 class="pt-3">Update {{project.title}}</h1>
+<h1 class="update-h1">Update "{{project.title}}"</h1>
 
 <div class="form-group" class="project-update-container">
-  <form class="form-group"action="" method="post">
+  <form class="form-group" action="" method="post">
     {% csrf_token %} {{form.as_p}} <input type="submit" value="Submit" />
   </form>
 </div>
