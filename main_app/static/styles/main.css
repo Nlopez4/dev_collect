@@ -353,10 +353,6 @@ a {
 /* PROJECT UPDATE PAGE */
 
 
-/* .update {
-  margin-top: 500px;
-} */
-
 .update-h1 {
   font-family: pacifico, cursive;
   font-size: 70px;
@@ -368,4 +364,9 @@ a {
   width: 30%;
   justify-content: center; 
   margin-left: 35%;
+}
+
+button {
+  margin-left: 40% !important;
+ 
 }

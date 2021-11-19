@@ -7,9 +7,10 @@
   <form class="form-update" action="" method="post">
       {% csrf_token %}
       {{ form.as_p }}
-      <input type="submit" value="Submit" />
+      <button type="submit" class="btn btn-secondary" class="update-sub">Submit</button>
   </form>
   </div>
+  
 
 
 {% else %} Sorry, only users can edit! {% endif %} {% else %} Sorry, only users
@@ -22,3 +23,6 @@ can edit! {% endif %} {% endblock %}
     <div class="form-title">{{ form.github_link }}</div>
     <div class="form-title">{{ form.site_link }}</div>
     {% endcomment %}
+
+{% comment %} <input class="update-submit" type="submit" value="Submit" />  {% endcomment %}
+    
