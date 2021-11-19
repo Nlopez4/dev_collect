@@ -9,13 +9,14 @@
 
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
 }
 
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -351,15 +352,20 @@ a {
 /* ======================================== */
 /* PROJECT UPDATE PAGE */
 
-.project-update-container {
-  text-align: center !important;
-  justify-content: center !important;
-  
-}
+
+/* .update {
+  margin-top: 500px;
+} */
 
 .update-h1 {
   font-family: pacifico, cursive;
   font-size: 70px;
   text-align: center;
   padding: 60px;
+}
+
+.form-group {
+  width: 30%;
+  justify-content: center; 
+  margin-left: 35%;
 }
