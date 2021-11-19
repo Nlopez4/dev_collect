@@ -13,7 +13,10 @@ django-crispy-forms = "*"
 django-heroku = "*"
 gunicorn = "*"
 django-environ = "*"
+Pillow = “*”
+dj-database-url = “*”
 whitenoise = "*"
+
 
 [dev-packages]
 
