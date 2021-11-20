@@ -25,8 +25,10 @@
 
 {% if user.is_authenticated %}
   {% comment %} Hi {{ user.username }}! {% endcomment %}
+   <a class="splash-link" href="{% url 'project_create' %}">Add Project</a>
   <a class="splash-link" href="{% url 'logout' %}">Logout</a>
  <a class="splash-link" href="{% url 'profile' user.pk %}">Profile</a>
+
 {% else %}
   {% comment %} <p>You are not logged in</p> {% endcomment %}
   <a class="splash-link" href="{% url 'login' %}">LogIn</a>

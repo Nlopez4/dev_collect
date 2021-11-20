@@ -30,15 +30,12 @@
       </ul>
       {% endfor %}
     </div>
-    {% if user.username == profile.user.username %}
-<a class="splash-link" href="{% url 'project_create' %}">Add a project</a>
-{% endif %}
+
+  </div>
     <div class="edit-profile">
     <a class="edit-profile-button" href="{% url 'profile_update' user.pk %}">Edit</a>
     </div>
   </div>
 </div>
-
-
 
 {% endblock %}
