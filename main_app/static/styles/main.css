@@ -410,6 +410,25 @@ a {
   margin-left: 60% !important;
 } 
 
+.update-pro {
+  margin-top: -50px;
+}
+
+.pro-update {
+  margin-left: 35%;
+  margin-top: 7%;
+}
+
+
+.update-pro-sub {
+  margin-left: 10%;
+  background-color: white;
+  color: black;
+  width: 120px;
+  height: 25px;
+  cursor:pointer;
+  font-family: Noto Serif, serif;
+}
 /* ======================================== */
 /* CREATE PROJECT PAGE */
 

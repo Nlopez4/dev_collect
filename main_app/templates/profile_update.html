@@ -6,11 +6,13 @@
 <div class="form-group" class="form-group-pro">
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <table>
+    <table class="update-pro">
     {{ form.as_table }}
-    <button type="submit" class="btn btn-secondary" class="update-sub">Submit</button>
     </table>
-  </form>
+<div class="pro-update">
+     <button type="submit" class="update-pro-sub">Submit</button>
+</duv>
+</form>
 </div>
 
 
