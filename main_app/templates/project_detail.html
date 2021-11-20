@@ -21,8 +21,12 @@
 <!-- UPDATE AND DELETE POST-->
 {% if user.is_authenticated %}
 {% if user.profile == project.profile %}
-<a class="project-buttons" href="{% url 'project_update' project.pk %}">EDIT</a>
-<a class="project-buttons" href="{% url 'project_delete' project.pk %}">DELETE</a>
+<div class="edit1">
+<a class="project-buttons1" href="{% url 'project_update' project.pk %}">EDIT</a>
+</div>
+<div class="delete1">
+<a class="project-buttons2" href="{% url 'project_delete' project.pk %}">DELETE</a>
+</div>
 {% endif %}
 {% endif %}
 </div>

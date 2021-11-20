@@ -373,6 +373,31 @@ a {
   font-family: Josefin Sans;
 }
 
+.edit1 {
+  margin-left: 40%;
+  margin-top: 20px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  width: 120px;
+  height: 25px;
+  cursor:pointer;
+  font-family: Noto Serif, serif;
+}
+
+.delete1 {
+  margin-left: 54%;
+  margin-top: -25px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  width: 120px;
+  height: 25px;
+  cursor:pointer;
+  font-family: Noto Serif, serif;
+}
+
+
 /* ======================================== */
 /* PROJECT UPDATE PAGE */
 
@@ -391,8 +416,8 @@ a {
 }
 
 .sub-bttn {
- 
- 
+  margin-left: 35%;
+  margin-top: 7%;
 }
 
 /* ======================================== */
