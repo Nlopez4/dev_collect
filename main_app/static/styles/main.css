@@ -479,12 +479,19 @@ a {
 }
 
 .login-bttn {
-  margin-left: 10%;
   justify-content:center;
   margin-top: 40px; 
-  
   align-items:center;
   
+}
+.login-sub {
+  margin-left: 46%;
+  background-color: white;
+  color: black;
+  width: 120px;
+  height: 25px;
+  cursor:pointer;
+  font-family: Noto Serif, serif;
 }
 
 /* ======================================== */
@@ -503,9 +510,22 @@ a {
   justify-content:center;
 }
 
+.register-table {
+  margin-top: -20px;
+}
+
 .register-bttns {
   display:flex;
   align-items:center;
   justify-content:center;
   margin-top: 40px;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  width: 120px;
+  height: 25px;
+  cursor:pointer;
+  font-family: Noto Serif, serif;
 }
