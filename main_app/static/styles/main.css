@@ -41,12 +41,12 @@ body {
 
 .search-bttn {
   width: 100px;
-  margin-left: -25px;
+  margin-left: 1%;
   margin-top: 90px;
   
 }
 
-button {
+.go-bttn {
   border-radius: 50%;
   height: 35px;
   width: 40px;
@@ -390,8 +390,8 @@ a {
   margin-left: 35%;
 }
 
-button {
-  margin-left: 40% !important;
+.sub-bttn {
+ 
  
 }
 
@@ -422,6 +422,26 @@ button {
 .form-group-2 {
   width: 100% !important;
   margin-left: 70% !important;
+}
+
+.update-table {
+  margin-top: -50px;
+}
+
+.create-bttn {
+  margin-left: 35%;
+  margin-top: 7%;
+ 
+}
+
+.update-sub {
+  margin-left: 10%;
+  background-color: white;
+  color: black;
+  width: 120px;
+  height: 25px;
+  cursor:pointer;
+  font-family: Noto Serif, serif;
 }
 
 /* ======================================== */

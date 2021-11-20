@@ -3,10 +3,12 @@
 
 <div class="form-group" class="form-group-2">
 <form method="POST">
-<table>
+<table class="update-table">
   {% csrf_token %} {{ form.as_table}}
-  <button type="submit" class="btn btn-secondary" class="update-sub">Submit</button>
 </table>
+<div class="create-bttn">
+  <button type="submit" class="update-sub">Submit</button>
+</div>
 </form>
  </div>
 
