@@ -7,12 +7,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&family=Josefin+Sans:wght@100&family=Jost&family=Open+Sans:wght@300&family=Pacifico&family=Philosopher&family=Playfair+Display:wght@400;500&family=Quicksand&family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arvo&family=Josefin+Sans:wght@100&family=Jost&family=Noto+Serif:wght@700&family=Open+Sans:wght@300&family=Pacifico&family=Philosopher&family=Playfair+Display:wght@400;500&family=Quicksand&family=Roboto:wght@300&display=swap");
 
-
 a {
   text-decoration: none !important;
   color: black;
 }
-
 
 html {
   height: 100%;
@@ -43,7 +41,6 @@ body {
   width: 100px;
   margin-left: 1%;
   margin-top: 90px;
-  
 }
 
 .go-bttn {
@@ -52,7 +49,6 @@ body {
   width: 40px;
   background-color: green;
   cursor: pointer;
- 
 }
 
 /* SPLASH PAGE */
@@ -69,9 +65,9 @@ body {
   font-family: pacifico, sans-serif;
   font-size: 90px;
   color: white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .splash-image {
@@ -88,6 +84,7 @@ body {
 /* SPLASH PAGE: SEARCH BAR */
 .search-form {
   padding: 30px;
+  margin-left: 70px;
   min-height: 50vh;
   display: flex;
   justify-content: center;
@@ -106,7 +103,6 @@ body {
 
 /* ================================================================= */
 /* PROJECT LIST PAGE */
-
 
 .project-h1 {
   left: 0;
@@ -140,7 +136,6 @@ body {
   padding: 17px;
   background: white;
   color: black;
-  
 }
 
 @keyframes gradient {
@@ -210,9 +205,7 @@ a {
   max-height: 850px;
   border-radius: 40px;
   box-shadow: rgba(243, 239, 239, 0.4);
-
 }
-  
 
 @keyframes gradient {
   0% {
@@ -239,7 +232,6 @@ a {
   padding: 20px;
   overflow-wrap: break-word;
 }
-
 
 .user-info {
   width: 300px;
@@ -276,8 +268,6 @@ a {
   padding: 10px;
 }
 
-
-
 .bio-p,
 .skills-p,
 .myprojects-h2 {
@@ -287,30 +277,24 @@ a {
   /* margin-top: 35px; */
 }
 
-
 .myprojects-list {
   text-decoration: none;
   color: white;
-
 }
 
-
 .edit-profile {
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 45%;
   margin-top: 185px;
   background-color: white;
   color: black;
   width: 120px;
   height: 25px;
-  cursor:pointer;
+  cursor: pointer;
   font-family: Noto Serif, serif;
-  
-  
 }
-
 
 /* ======================================== */
 /* PROJECT DETAILS PAGE */
@@ -338,10 +322,7 @@ a {
   max-height: 600px;
   border-radius: 40px;
   box-shadow: rgba(243, 239, 239, 0.4);
-
 }
-
-
 
 .project-buttons {
   float: right;
@@ -351,10 +332,9 @@ a {
   width: 60px;
   height: 25px;
   border-radius: 20px;
-  cursor:pointer;
+  cursor: pointer;
   font-family: Noto Serif, serif;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  
 }
 
 .project-dets {
@@ -367,7 +347,6 @@ a {
 }
 
 .p-reg {
-  
   font-size: 20px;
   text-transform: uppercase;
   font-family: Josefin Sans;
@@ -381,7 +360,7 @@ a {
   color: black;
   width: 120px;
   height: 25px;
-  cursor:pointer;
+  cursor: pointer;
   font-family: Noto Serif, serif;
 }
 
@@ -393,14 +372,12 @@ a {
   color: black;
   width: 120px;
   height: 25px;
-  cursor:pointer;
+  cursor: pointer;
   font-family: Noto Serif, serif;
 }
 
-
 /* ======================================== */
 /* PROJECT UPDATE PAGE */
-
 
 .update-h1 {
   font-family: pacifico, cursive;
@@ -411,7 +388,7 @@ a {
 
 .form-group {
   width: 30%;
-  justify-content: center; 
+  justify-content: center;
   margin-left: 35%;
 }
 
@@ -433,7 +410,7 @@ a {
 .form-group-pro {
   width: 100% !important;
   margin-left: 60% !important;
-} 
+}
 
 .update-pro {
   margin-top: -50px;
@@ -444,14 +421,13 @@ a {
   margin-top: 7%;
 }
 
-
 .update-pro-sub {
   margin-left: 10%;
   background-color: white;
   color: black;
   width: 120px;
   height: 25px;
-  cursor:pointer;
+  cursor: pointer;
   font-family: Noto Serif, serif;
 }
 /* ======================================== */
@@ -475,7 +451,6 @@ a {
 .create-bttn {
   margin-left: 35%;
   margin-top: 7%;
- 
 }
 
 .update-sub {
@@ -484,7 +459,7 @@ a {
   color: black;
   width: 120px;
   height: 25px;
-  cursor:pointer;
+  cursor: pointer;
   font-family: Noto Serif, serif;
 }
 
@@ -499,15 +474,14 @@ a {
 }
 
 .login {
-  justify-content:center;
+  justify-content: center;
   margin-left: 40%;
 }
 
 .login-bttn {
-  justify-content:center;
-  margin-top: 40px; 
-  align-items:center;
-  
+  justify-content: center;
+  margin-top: 40px;
+  align-items: center;
 }
 .login-sub {
   margin-left: 46%;
@@ -515,7 +489,7 @@ a {
   color: black;
   width: 120px;
   height: 25px;
-  cursor:pointer;
+  cursor: pointer;
   font-family: Noto Serif, serif;
 }
 
@@ -530,9 +504,9 @@ a {
 }
 
 .register {
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .register-table {
@@ -540,9 +514,9 @@ a {
 }
 
 .register-bttns {
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 40px;
 }
 
@@ -551,6 +525,6 @@ a {
   color: black;
   width: 120px;
   height: 25px;
-  cursor:pointer;
+  cursor: pointer;
   font-family: Noto Serif, serif;
 }
